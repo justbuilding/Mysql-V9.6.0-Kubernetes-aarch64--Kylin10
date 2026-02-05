@@ -83,7 +83,7 @@ kubectl apply -f mysql-service.yaml
 ### MySQL 5.7 (AMD64)
 - **密码类型**：root 密码
 - **默认密码**：root
-- **环境变量**：`MYSQL_ROOT_PASSWORD`
+- **环境变量**：无需设置密码环境变量
 
 ### MySQL 5.7 (ARM64)
 - **密码类型**：空密码
