@@ -244,6 +244,7 @@ kubectl delete pv mysql-pv
 - PV 容量：10Gi
 - 访问模式：ReadWriteOnce
 - 存储类型：hostPath（仅用于开发测试环境）
+- 宿主机路径：`/data/k8s/mysql`
 - 挂载路径：`/var/lib/mysql`
 
 ### 网络配置

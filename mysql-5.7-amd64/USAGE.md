@@ -99,7 +99,7 @@ MySQL 数据存储在持久卷中，重启 Pod 后数据仍然存在：
 
 ### 存储配置
 
-- **持久卷**：使用 `hostPath` 类型，路径为 `/data/mysql`
+- **持久卷**：使用 `hostPath` 类型，路径为 `/data/k8s/mysql`
 - **存储容量**：10Gi
 - **访问模式**：ReadWriteOnce
 - **存储类**：manual

@@ -10,5 +10,5 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /data/mysql
+    path: /data/k8s/mysql
   storageClassName: manual
