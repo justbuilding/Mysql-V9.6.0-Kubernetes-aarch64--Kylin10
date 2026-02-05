@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  labels:
+    app: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        # MySQL 9.6.0 for ARM64 (aarch64) architecture
+        # Official ARM64 support
+        # This image is compatible with ARM64 servers
+        # For amd64 architecture, use mysql-5.7-amd64 directory
+        image: arm64v8/mysql:9.6.0
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "123456"
+        args:
+        - "--lower-case-table-names=1"
+        - "--character-set-server=utf8mb4"
+        - "--collation-server=utf8mb4_general_ci"
+        volumeMounts:
+        - name: mysql-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-storage
+        persistentVolumeClaim:
+          claimName: mysql-pvc
