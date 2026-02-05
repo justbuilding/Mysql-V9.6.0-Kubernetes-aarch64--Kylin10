@@ -21,6 +21,7 @@ spec:
         # This image is compatible with ARM64 servers
         # Source: registry.cn-hangzhou.aliyuncs.com/public_hjj_images/mysql9.6.0:arm64
         image: registry.cn-hangzhou.aliyuncs.com/public_hjj_images/mysql9.6.0:arm64
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3306
         env:

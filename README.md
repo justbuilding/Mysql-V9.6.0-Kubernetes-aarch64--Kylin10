@@ -18,7 +18,7 @@ This repository contains Kubernetes deployment configurations for MySQL database
 **支持架构**：amd64 和 ARM64
 
 **镜像信息**：
-- MySQL 5.7 (AMD64): `registry.cn-hangzhou.aliyuncs.com/public_hjj_images/mysql:57arm64`
+- MySQL 5.7 (AMD64): `registry.cn-hangzhou.aliyuncs.com/public_hjj_images/mysql:57amd64`
 - MySQL 5.7 (ARM64): `registry.cn-hangzhou.aliyuncs.com/public_hjj_images/mysql:57arm64`
 
 **部署步骤**：
@@ -64,7 +64,7 @@ kubectl apply -f mysql-service.yaml
 ## 环境变量
 
 ### MySQL 5.7
-- `MYSQL_ROOT_PASSWORD`：root 用户密码（默认：123456）
+- `MYSQL_ROOT_PASSWORD`：root 用户密码（默认：空）
 
 ### MySQL 9.6.0
 - `MYSQL_ROOT_PASSWORD`：root 用户密码（默认：123456）
@@ -145,6 +145,5 @@ kubectl logs -l app=mysql -n default
 
 ---
 
-**维护者**：黄佳俊
-**联系邮箱**：13415145594@163.com
+
 **更新时间**：2026-02-05
